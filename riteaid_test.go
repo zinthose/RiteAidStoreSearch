@@ -43,7 +43,7 @@ func Test__getStoreDataURL(t *testing.T) {
 
 	// Test GetStoreDataStruct
 	want = ""
-	result, err := GetStoreDataStruct(address, 0.5)
+	result, err := GetStoreData(address, 0.5)
 	// TODO: More Tests!
 	if err != nil || result.Status != "SUCCESS" || result.Data.Stores == nil || len(result.Data.Stores) == 0 || result.Data.Stores[0].StoreNumber == 0 || result.Data.Stores[0].StoreNumber != 3357 {
 		t.Errorf("GetStoreDataStruct(%q, 0.5) = <result>, want %q", address, want)
