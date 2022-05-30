@@ -19,3 +19,6 @@ storeData.json
 
 # Local WorkSpace Setting File
 settings.json
+
+# Ignore scrap files as they are usued to testing ideas.
+scrap*.go
