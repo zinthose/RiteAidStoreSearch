@@ -188,7 +188,7 @@ func GetStoreDataJSON(address string, radius float64) (string, error) {
 	return sb, nil
 }
 
-// Function will place call to RiteAid API and return the store location data
+// Function will place call to API and return the store location data
 // as a struct.
 // It is recommended to keep the radius as small as possible to minimize the
 // data received unless importing multiple stores for caching purposes.
@@ -201,7 +201,7 @@ func GetStoreDataJSON(address string, radius float64) (string, error) {
 //
 // RETURNS: The store location data as a struct. In addition,
 // if the API call fails, a ErrRiteAidAPIError will be raised
-func GetStoreDataStruct(address string, radius float64) (Result, error) {
+func GetStoreData(address string, radius float64) (Result, error) {
 	var result Result
 	var err error
 
