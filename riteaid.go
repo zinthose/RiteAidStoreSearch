@@ -166,7 +166,7 @@ type Store struct {
 //
 // RETURNS: The raw store location data. This is the string value returned
 // from the API call in JSON format
-func GetStoreData(address string, radius float64) (string, error) {
+func GetStoreDataJSON(address string, radius float64) (string, error) {
 	url, err := __getStoreDataURL(address, radius)
 	if err != nil && err != ErrRadiusOverMax {
 		return "", err
@@ -206,7 +206,7 @@ func GetStoreDataStruct(address string, radius float64) (Result, error) {
 	var err error
 
 	// Get Store Data
-	sb, err := GetStoreData(address, radius)
+	sb, err := GetStoreDataJSON(address, radius)
 	if err != nil {
 		return result, err
 	}
