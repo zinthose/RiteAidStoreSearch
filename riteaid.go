@@ -51,6 +51,9 @@ var ErrTimeParseOrder = errors.New("parsed start time is after parsed end time")
 // Error returned when RiteAid API returns an error
 var ErrRiteAidAPIError = errors.New("RiteAid API returned an error")
 
+// Error returned when a supplied latitude/longitude pair is unable to get a timezone
+var ErrFailedToGetTimeZoneFromGPS = errors.New("TimeZone not found at latitude/longitude supplied.")
+
 // RiteAid store api returned a defined JSON structure.
 // As of 5/29/2022 the structure is accurate but is subject to change as the API evolves.
 //
@@ -450,6 +453,9 @@ func getStoreDataURL(address string, radius float64) (string, error) {
 func GetTZLocation(longitude float64, latitude float64) (*time.Location, error) {
 	// Get the current date in the time zone / location specified
 	locName := timezonemapper.LatLngToTimezoneString(latitude, longitude)
+	if locName == "" {
+		return &time.Location{}, ErrFailedToGetTimeZoneFromGPS
+	}
 	loc, err := time.LoadLocation(locName)
 	if err != nil {
 		return &time.Location{}, err
