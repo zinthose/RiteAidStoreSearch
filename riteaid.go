@@ -167,7 +167,7 @@ type Store struct {
 // RETURNS: The raw store location data. This is the string value returned
 // from the API call in JSON format
 func GetStoreDataJSON(address string, radius float64) (string, error) {
-	url, err := __getStoreDataURL(address, radius)
+	url, err := getStoreDataURL(address, radius)
 	if err != nil && err != ErrRadiusOverMax {
 		return "", err
 	}
@@ -433,7 +433,7 @@ func GetStoreAddress(storeData Store) string {
 //  ADDRESS: The address of the store. i.e. "4 Walton St E, Willard, OH 44890" (required)
 //  RADIUS: The radius of the store. i.e. 3 (required - must be between 0 and 25. 0 = max radius)
 //  RETURNS: The URL for the API call.
-func __getStoreDataURL(address string, radius float64) (string, error) {
+func getStoreDataURL(address string, radius float64) (string, error) {
 	// Require radius to be between 0 and 25 (0 is default will list all withing 25 mile radius)
 	var err error
 	if radius <= 0 {
