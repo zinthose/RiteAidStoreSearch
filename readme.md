@@ -1,5 +1,6 @@
 # RiteAid Store Search WebAPI Wrapper
-> ***WARNING!*** This is my _VERY_ first Go project so their ~~maybe~~ **defiantly are** dragons! 🔥🐉
+> ***WARNING!*** This is my _VERY_ first Go project so their ~~maybe~~ **defiantly are** dragons! 🔥🐉 
+> Expect breaking changes until v1
 
 >The test module is still being tweaked to ensure I have accounted for all the dragon eggs 🥚 that may hatch in the future.
 
