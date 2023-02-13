@@ -1,4 +1,4 @@
-module srmpal/riteaid/v2
+module github.com/zinthose/RiteAidStoreSearch
 
 go 1.18
 
