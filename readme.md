@@ -1,7 +1,8 @@
 # RiteAid Store Search WebAPI Wrapper
-> ***WARNING!*** This is my _VERY_ first Go project so their ~~maybe~~ **defiantly are** dragons! 🔥🐉
 
->The test module is still being tweaked to ensure I have accounted for all the dragon eggs 🥚 that may hatch in the future.
+> ***Project Archived*** I no longer work for RiteAid FSS and thus no longer have a need for this.
+
+> ***WARNING!*** This is my _VERY_ first Go project so their ~~maybe~~ **defiantly are** dragons! 🔥🐉
 
 ## What it do? 🔎
 This module is a wrapper for the RiteAid Store search API. The date and times are store location / timezone aware and will always be returned with the store locality in mind. This way calculations can traverse timezones accurately
